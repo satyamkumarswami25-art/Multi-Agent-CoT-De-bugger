@@ -1,4 +1,14 @@
-# Multi-Agent-CoT-De-buggerimport os
+## 🖼️ Architecture Flow
+
+The Multi-Agent Debugging system operates in a logical, three-step cycle to ensure reliable and transparent code fixes.
+
+
+
+1.  **Input:** Developer submits the buggy code snippet.
+2.  **Planner Agent (CoT Specialist):** This agent analyzes the bug, generates a **Chain-of-Thought (CoT)** plan, and determines if the **Code Executor Tool** needs to be called.
+3.  **Code Executor Tool (Function Calling):** This tool is invoked to run the buggy code (simulated) and returns the **Error/Success** output.
+4.  **Debugger Agent:** It uses the Planner's analysis and the Tool's output to generate the **Final Fixed Code** and a detailed **Root Cause Analysis**.
+5.  # Multi-Agent-CoT-De-buggerimport os
 import json
 from google import genai
 from google.genai import types
